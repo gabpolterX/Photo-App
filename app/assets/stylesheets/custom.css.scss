@@ -2,3 +2,46 @@
     margin-top: 3.5% ;
     padding-right: 5px;
 }
+.jumbotron {
+    text-align: center;
+    background-image: asset-url('Lake-Background4.jpg');
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    font-family: 'Helvetica Neue' !important;
+    font-stretch: expanded;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    margin-left: 15px;
+    margin-right: 15px;
+    text-shadow: -1px 0 #555, 0 1px #555, 1px 0 #555, 0 -1px #555;
+    border-radius: 16px;
+    -webkit-border-radius: 16px;
+    -moz-border-radius: 16px;
+    -ms-border-radius: 16px;
+    -o-border-radius: 16px;
+}
+.type-of-text {
+    font-family: 'Helvetica Neue' !important;
+    font-stretch: expanded;
+    text-shadow: -1px 0 #555, 0 1px #555, 1px 0 #555, 0 -1px #555;
+    color: gray;
+}
+.plan{
+    background-color: #8d7979;
+    border-radius: 16px;
+    -webkit-border-radius: 16px;
+    -moz-border-radius: 16px;
+    -ms-border-radius: 16px;
+    -o-border-radius: 16px;
+    padding: 20px;
+    margin: 10px;
+    flex: 1;
+    min-width: 45%;
+}
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}

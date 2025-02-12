@@ -1,2 +1,47 @@
-<h1 class="mt-4">Welcome to the Photo</h1>
-<p>Find me in app/views/welcome/index.html.erb</p>
+<% if user_signed_in? %>
+  <h3 class="text-center mt-2">Welcome: <%= current_user.email %></h3>
+<% else %>
+    <body class="BodyHome">
+    <div class="container" id="home-container">
+        <div class="jumbotron text-center mt-4">
+        <h1 class="display-4 text-white">Photo App</h1>
+        <p class="lead text-white">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information</p>
+        <p class="text-white">It uses utility classes for typography and spacing to space content out within the larger container</p>
+        <%= link_to "Sign up!", new_user_registration_path, class: "btn btn-success btn-lg" %>
+        </div>
+    </div>
+
+    <h2 class="text-center type-of-text mt-3"><-- Sección de planes --></h2>
+    <div class="container">
+        <div class="row">
+        <div class="col-lg-6 col-md-6 col-sm-12 plan text-center">
+            <h2>Premium Plan</h2>
+            <h3>Price: $10</h3>
+            <hr>
+            <div class="features">
+                <h5>Unlimited Image Uploads</h5>
+                <h5>Responsive design</h5>
+                <h5>Access anywhere</h5>
+            </div>
+            <p>
+            <%= link_to 'Sign Up', new_user_registration_path, class: 'btn btn-primary sign-up mt-2' %>
+            </p>
+        </div>
+        <div class="col-lg-6 col-md-6 col-sm-12 plan text-center">
+            <h2>Amaze Plan</h2>
+            <h3>Price: $20</h3>
+            <hr>
+            <div class="features">
+                <h5>Unlimited Image Uploads</h5>
+                <h5>Responsive design</h5>
+                <h5>Access anywhere</h5>
+                <h5 class='extra'>Unlimited projects</h5>
+            </div>
+            <p>
+            <%= link_to 'Sign Up', new_user_registration_path, class: 'btn btn-primary sign-up mt-2' %>
+            </p>
+        </div>
+        </div>
+    </div>
+    </body>
+<% end %>
